@@ -1,5 +1,5 @@
-from mcp import tool
+from app.mcp_app import mcp
 
-@tool
-def generate_report(analysis: str, data: dict = None) -> str:
+@mcp.tool()
+def generate_report(analysis: str) -> str:
     return f"## Quarterly Report\n\n{analysis}"
